@@ -58,3 +58,84 @@ node script.js
 ```
 
 If you see the messages printed in the terminal, your code ran. If Node reports an error, read the line number first. It is usually pointing near the typo or missing character.
+
+## Terminal commands
+
+The Terminal is a way to talk to your computer by typing commands instead of clicking around. The commands below work on macOS. Spaces matter, and the computer usually does exactly what you type, so slow down for the delete commands.
+
+```bash
+pwd
+```
+
+`pwd` means "print working directory." It tells you which folder you are currently in. This is useful when you are wondering, "Where am I?"
+
+```bash
+ls
+```
+
+`ls` lists the files and folders in the place where you are standing.
+
+```bash
+mkdir practice-folder
+cd practice-folder
+```
+
+`mkdir` means "make directory," which is just a fancy way to say "make a folder." `cd` means "change directory," so it moves you into a folder. To move back out one level, use `cd ..`.
+
+```bash
+cp file.txt copy-of-file.txt
+```
+
+`cp` copies a file. The original stays where it is, and the second name is the new copy. Both files need to be in the current folder unless you give a path to another folder.
+
+```bash
+mv old-name.txt new-name.txt
+```
+
+`mv` means "move," but it also renames files. In this example, the file gets a new name. Double-check the names before pressing Enter.
+
+```bash
+rm file.txt
+```
+
+`rm` removes a file. It may not go to the Trash like a file deleted in Finder, so treat it as permanent. Do not use it until you are sure the filename is correct.
+
+```bash
+rm -rf practice-folder
+```
+
+This removes the folder and everything inside it. `-r` means recursive (go through all the contents), and `-f` means force. This is powerful and dangerous. Never paste `rm -rf` unless you completely understand which folder it will delete.
+
+## Fun macOS commands
+
+These commands are little experiments. They are not needed for Git, but they are fun ways to see that the Terminal can do more than list files.
+
+```bash
+say hello
+say -f text.txt
+date
+date | say
+```
+
+- `say hello` makes your Mac read the word hello out loud.
+- `say -f text.txt` reads the contents of `text.txt` out loud. The file has to exist in your current folder. In this project, `speak.txt` is the text file we already have, so you could use `say -f speak.txt`.
+- `date` prints the current date and time.
+- `date | say` sends the date into `say`, so your Mac reads the date out loud. The `|` symbol is called a pipe: it passes the output of one command into another command.
+
+## Checking the weather
+
+```bash
+curl http://wttr.in/
+```
+
+`curl` asks a web address for information. This address returns a text weather report.
+
+## Terminal snow
+
+This last one is the snow we saw. Silly but fun. Press `Control + C` when you want it to stop.
+
+```bash
+ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S=["2743".to_i(16)].pack("U*");a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.1}'
+```
+
+This uses Ruby to draw snowflake characters at random spots in the Terminal. The `-e` means "run the Ruby code that comes next." It keeps looping until you stop it with `Control + C`.

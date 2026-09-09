@@ -74,3 +74,13 @@ console.log("The shopping total is $" + total + ".");
 // === checks both the value AND the type. This is usually the better choice.
 console.log(4 === "4"); // false: number 4 and text "4" are different types
 console.log(4 === 4); // true: both are numbers with the same value
+
+// These are terminal commands, not JavaScript commands. Try them in the Terminal app.
+// mkdir practice-folder       makes a new folder
+// cd practice-folder          moves into that folder
+// ls                          lists what is inside the current folder
+// pwd                         shows where you are right now
+// cp file.txt copy.txt        makes a copy of a file
+// mv old-name.txt new-name.txt renames or moves a file
+// rm file.txt                 removes one file (be careful!)
+// rm -rf practice-folder      removes a folder and everything inside it (very careful!)
