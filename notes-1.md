@@ -4,5 +4,8 @@
 ```bash
 git init
 git status
-git add .
+git add . (put work into an envelope)
+git commit -m "clear commit message" (seal the envelope)
+--go to Github...
+git push (put the envelope)
 ```
