@@ -72,3 +72,15 @@ students.forEach((student) => {
 
 const studentNames = students.filter((student) => student.grade > 90).map((student) => student.name)
 console.log(studentNames)
+
+//To Ange's question about adding a new key/value pair. This is my OH DUH moment.
+//In one of the next modules you learn about the Spread Operator.
+
+//If we wanted to add something else to the object like `favoriteDrink: "coffee"`, we can use the Spread Operator like this:
+const studentsWithDrinks = students.map((student) => {
+    return {
+        ...student,//copies all existing properties (name, grade) into a new object, so you don't mutate the original array.
+        favoriteDrink: "coffee",
+    }
+})
+console.log(studentsWithDrinks)
