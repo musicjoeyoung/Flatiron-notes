@@ -28,7 +28,7 @@ const students = [
 console.log(students)
 const studentsWithDrinks = students.map((student) => {
     return {
-        ...student, // spread operator copies all existng properties (name, grade) into a new object, so that we don't mutate the original array
+        ...student, // spread operator copies all existing properties (name, grade) into a new object, so that we don't mutate the original array
         favoriteDrink: "coffee"
     }
 })
