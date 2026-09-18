@@ -10,7 +10,7 @@ function myFunction(phrase){
 
 //setTimeout(myFunction("hello again!!!!"), 3000)//the function passed in setTimeout must NOT be invoked
 
-setTimeout(() => {
+setTimeout(() => {//this is called an anonymous function
     myFunction("please work this time!!")
 }, 3000)
 
@@ -24,4 +24,11 @@ printStudentGrade("Mickey", 100, console.log)
 
 printStudentGrade("Joseph", 10000000, (text) => {
     console.log(`${text} Here is something! `)
+})
+
+const button = document.getElementById("button")
+
+//callbacks with event listeners
+button.addEventListener("click", () => {
+    console.log("Button clicked!")
 })
